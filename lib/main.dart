@@ -77,104 +77,300 @@ class _Calculadora extends State<SocialPostScreen> {
               ],
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ElevatedButton(
-                onPressed: toggleLike, 
-                child: Text('7'),
-              ),
-              ElevatedButton(
-                onPressed: toggleLike, 
-                child: Text('8')
-              ),
-              ElevatedButton(
-                onPressed: toggleLike, 
-                child: Text('9')
-              ),
-              ElevatedButton(
-                onPressed: toggleLike, 
-                child: Text('/')
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ElevatedButton(
-                onPressed: toggleLike, 
-                child: Text('4'),
-              ),
-              ElevatedButton(
-                onPressed: toggleLike, 
-                child: Text('5')
-              ),
-              ElevatedButton(
-                onPressed: toggleLike, 
-                child: Text('6')
-              ),
-              ElevatedButton(
-                onPressed: toggleLike, 
-                child: Text('x')
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ElevatedButton(
-                onPressed: toggleLike, 
-                child: Text('1'),
-              ),
-              ElevatedButton(
-                onPressed: toggleLike, 
-                child: Text('2')
-              ),
-              ElevatedButton(
-                onPressed: toggleLike, 
-                child: Text('3')
-              ),
-              ElevatedButton(
-                onPressed: toggleLike, 
-                child: Text('-')
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ElevatedButton(
-                onPressed: toggleLike, 
-                child: Text('0'),
-              ),
-              ElevatedButton(
-                onPressed: toggleLike, 
-                child: Text('.')
-              ),
-              ElevatedButton(
-                onPressed: toggleLike, 
-                child: Text('-/+')
-              ),
-              ElevatedButton(
-                onPressed: toggleLike, 
-                child: Text('+')
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ElevatedButton(
-                onPressed: toggleLike,
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-                  foregroundColor: Colors.white,
-                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-                ),
-                child: Text('='),
-              ),
-            ],
-          ),
+          Expanded(
+            child: Column(
+              children: [
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 64, vertical: 2), // Margen en los lados y arriba/abajo
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Espacio uniforme entre botones
+                      children: [
+                        Expanded(
+                          child: AspectRatio(
+                            aspectRatio: 1,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                              ),
+                              child: Text('7'),
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: AspectRatio(
+                            aspectRatio: 1,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                              ),
+                              child: Text('8'),
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: AspectRatio(
+                            aspectRatio: 1,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                              ),
+                              child: Text('9'),
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: AspectRatio(
+                            aspectRatio: 1,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+                                foregroundColor: Colors.white,
+                              ),
+                              child: Text('/'),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 64, vertical: 2), // Margen en los lados y arriba/abajo
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Espacio uniforme entre botones
+                      children: [
+                        Expanded(
+                          child: AspectRatio(
+                            aspectRatio: 1,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                              ),
+                              child: Text('4'),
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: AspectRatio(
+                            aspectRatio: 1,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                              ),
+                              child: Text('5'),
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: AspectRatio(
+                            aspectRatio: 1,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                              ),
+                              child: Text('6'),
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: AspectRatio(
+                            aspectRatio: 1,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+                                foregroundColor: Colors.white,
+                              ),
+                              child: Text('x'),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 64, vertical: 2), // Margen en los lados y arriba/abajo
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Espacio uniforme entre botones
+                      children: [
+                        Expanded(
+                          child: AspectRatio(
+                            aspectRatio: 1,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                              ),
+                              child: Text('1'),
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: AspectRatio(
+                            aspectRatio: 1,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                              ),
+                              child: Text('2'),
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: AspectRatio(
+                            aspectRatio: 1,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                              ),
+                              child: Text('3'),
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: AspectRatio(
+                            aspectRatio: 1,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+                                foregroundColor: Colors.white,
+                              ),
+                              child: Text('-'),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 64, vertical: 2), // Margen en los lados y arriba/abajo
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Espacio uniforme entre botones
+                      children: [
+                        Expanded(
+                          child: AspectRatio(
+                            aspectRatio: 1,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                              ),
+                              child: Text('0'),
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: AspectRatio(
+                            aspectRatio: 1,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                              ),
+                              child: Text('.'),
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: AspectRatio(
+                            aspectRatio: 1,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                              ),
+                              child: Text('+/-'),
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: AspectRatio(
+                            aspectRatio: 1,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+                                foregroundColor: Colors.white,
+                              ),
+                              child: Text('+'),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 128, vertical: 8), // Margen en los lados y arriba/abajo
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Espacio uniforme entre botones
+                      children: [
+                        Expanded(
+                          child: AspectRatio(
+                            aspectRatio: 3/1,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+                                foregroundColor: Colors.white,
+                              ),
+                              child: Text('='),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+              ],
+            )
+          )
         ],
       ),
     );
