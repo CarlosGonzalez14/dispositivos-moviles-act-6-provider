@@ -4,6 +4,7 @@ class DisplayController extends ChangeNotifier{
   String _displayText = "";
   String? _operator;
   double? _firstValue, _secondValue;
+  bool _newOperation = true;
 
   String get displayText => _displayText;
 
@@ -27,6 +28,11 @@ class DisplayController extends ChangeNotifier{
           }
           else
           {
+            if(_newOperation == true)
+            {
+              _displayText = "";
+              _newOperation = false;
+            }
             _displayText += value;
           }
           break;
@@ -61,13 +67,22 @@ class DisplayController extends ChangeNotifier{
             _firstValue = null;
             _secondValue = null;
             _operator = null;
+            _newOperation = true;
           }
+          break;
         case 'C':
-          _firstValue = null;
-          _operator = null;
-          _secondValue = null;
-          _displayText = '';
+          clearScreen();
+          break;
       }
       notifyListeners();
+  }
+
+  void clearScreen()
+  {
+    _firstValue = null;
+    _operator = null;
+    _secondValue = null;
+    _newOperation = true;
+    _displayText = '';
   }
 }
