@@ -37,43 +37,6 @@ class CalculadoraScreen extends StatefulWidget {
 }
 
 class _CalculadoraScreenState extends State<CalculadoraScreen> {
-  String displayText = "";
-
-  void changeDisplay(String value) {
-    setState(() {
-      switch(value)
-      {
-        case '0':
-        case '1':
-        case '2':
-        case '3':
-        case '4':
-        case '5':
-        case '6':
-        case '7':
-        case '8':
-        case '9':
-          if(displayText == '+' || displayText == '-' || displayText == 'x' || displayText == '/' || displayText == '=')
-          {
-            displayText = value;
-          }
-          else
-          {
-            displayText += value;
-          }
-          break;
-        case '+':
-        case '-':
-        case 'x':
-        case '/':
-        case '=':
-          displayText = value;
-        case 'C':
-          displayText = '';
-      }
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
