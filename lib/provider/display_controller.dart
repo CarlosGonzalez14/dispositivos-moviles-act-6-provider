@@ -84,5 +84,6 @@ class DisplayController extends ChangeNotifier{
     _secondValue = null;
     _newOperation = true;
     _displayText = '';
+    notifyListeners();
   }
 }

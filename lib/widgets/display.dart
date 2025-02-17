@@ -9,23 +9,27 @@ class Display extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     String displayText = Provider.of<DisplayController>(context).displayText;
+    DisplayController displayController = Provider.of<DisplayController>(context, listen: false);
     
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 32),
-      child: Container(
-        width: double.infinity,
-        height: 100,
-        alignment: Alignment.centerRight,
-        padding: EdgeInsets.all(16),
-        decoration: BoxDecoration(
-          border: Border.all(color: Colors.black26),
-          color: Colors.black12,
+      child: GestureDetector(
+        onLongPress: () => displayController.clearScreen(),
+        child: Container(
+          width: double.infinity,
+          height: 100,
+          alignment: Alignment.centerRight,
+          padding: EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.black26),
+            color: Colors.black12,
+          ),
+          child: Text(
+            displayText,
+            style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+          ),
         ),
-        child: Text(
-          displayText,
-          style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
-        ),
-      ),
+      )
     );
   }
 }
