@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:moviles_act_4/widgets/button_row.dart';
 import 'package:moviles_act_4/widgets/display.dart';
 import 'package:moviles_act_4/widgets/equals_row.dart';
+import 'package:moviles_act_4/widgets/history.dart';
 
 class CalculadoraScreen extends StatefulWidget {
   const CalculadoraScreen({super.key});
@@ -13,6 +14,8 @@ class CalculadoraScreen extends StatefulWidget {
 class _CalculadoraScreenState extends State<CalculadoraScreen> {
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Calculadora"),
@@ -22,7 +25,7 @@ class _CalculadoraScreenState extends State<CalculadoraScreen> {
         children: [
           Display(),
           SizedBox(height: 10,),
-          Expanded(
+          Container(
             child: Column(
               children: [
                 ButtonRow(rowNumber: 1,),
@@ -32,7 +35,14 @@ class _CalculadoraScreenState extends State<CalculadoraScreen> {
                 EqualsRow(),
               ],
             ),
-          )
+          ),
+          SizedBox(height: 16,),
+          Text(
+            "Historial de Cálculos",
+            style: theme.textTheme.titleLarge
+          ),
+          SizedBox(height: 8,),
+          History(),
         ],
       ),
     );

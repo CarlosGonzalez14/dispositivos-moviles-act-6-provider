@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 class DisplayController extends ChangeNotifier{
-  String _displayText = "";
+  String _displayText = "", _calculation = "";
+  List<String> _calculationHistory = [];
   String? _operator;
   double? _firstValue, _secondValue;
   bool _newOperation = true;
 
   String get displayText => _displayText;
+  List<String> get calculationHistory => _calculationHistory;
 
   set displayText(String value){
       switch(value)
@@ -64,6 +66,10 @@ class DisplayController extends ChangeNotifier{
               _displayText = ((_firstValue ?? 0.0) / (_secondValue ?? 0.0)).toString();
                 break;
             }
+            _calculation = "$_firstValue $_operator $_secondValue = $_displayText";
+            _calculationHistory.add(_calculation);
+
+            _calculation = "";
             _firstValue = null;
             _secondValue = null;
             _operator = null;
